@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexo Urbano — Reporta Emergencias en Tiempo Real</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">!</span>
+        <span>Nexo Urbano</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#features">Funcionalidades</a></li>
+        <li><a href="#how">¿Cómo funciona?</a></li>
+        <li><a href="#benefits">Beneficios</a></li>
+        <li><a href="#stats">Impacto</a></li>
+        <li><a href="#profile">Mi perfil</a></li>
+        <li><a href="#operator">Operadores</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="#download" class="btn btn--outline">Descargar app</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__inner">
+      <div class="hero__text">
+        <span class="hero__badge">Lima Metropolitana</span>
+        <h1 class="hero__title">Reporta cualquier <span class="hero__title--accent">emergencia urbana</span> en segundos.</h1>
+        <p class="hero__subtitle">Nexo Urbano conecta a ciudadanos con bomberos, policía y Defensa Civil en tiempo real. Un solo botón, toda la información, respuesta inmediata.</p>
+        <div class="hero__cta">
+          <a href="#download" class="btn btn--primary">Descargar gratis</a>
+          <a href="#how" class="btn btn--ghost">Ver cómo funciona</a>
+        </div>
+        <div class="hero__proof">
+          <div class="hero__proof-item">
+            <strong>30 seg</strong>
+            <span>tiempo de reporte</span>
+          </div>
+          <div class="hero__proof-divider"></div>
+          <div class="hero__proof-item">
+            <strong>3 pasos</strong>
+            <span>para enviar alerta</span>
+          </div>
+          <div class="hero__proof-divider"></div>
+          <div class="hero__proof-item">
+            <strong>24/7</strong>
+            <span>disponible siempre</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__phone">
+          <div class="hero__phone-screen">
+            <div class="phone-ui">
+              <div class="phone-ui__header">
+                <span class="phone-ui__time">9:41</span>
+                <span class="phone-ui__title">Nexo Urbano</span>
+              </div>
+              <div class="phone-ui__body">
+                <p class="phone-ui__greeting">Hola, ¿estás bien?</p>
+                <button class="sos-btn" id="sosBtnHero" aria-label="Botón SOS">
+                  <span class="sos-btn__ring sos-btn__ring--1"></span>
+                  <span class="sos-btn__ring sos-btn__ring--2"></span>
+                  <span class="sos-btn__label">S.O.S</span>
+                </button>
+                <p class="phone-ui__hint">Mantén presionado para reportar</p>
+                <div class="phone-ui__map">
+                  <div class="map-dot map-dot--1"></div>
+                  <div class="map-dot map-dot--2"></div>
+                  <div class="map-dot map-dot--3"></div>
+                  <span class="map-label">Incidentes cercanos</span>
+                </div>
+              </div>
+              <div class="phone-ui__nav">
+                <span>🏠</span><span>🗺️</span><span class="active">🚨</span><span>📋</span><span>👤</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__floating hero__floating--1">
+          <span>📍</span> Ubicación detectada
+        </div>
+        <div class="hero__floating hero__floating--2">
+          <span>✅</span> Reporte enviado
+        </div>
+        <div class="hero__floating hero__floating--3">
+          <span>🚒</span> Bomberos en camino
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alert-bar">
+    <div class="alert-bar__inner">
+      <div class="alert-bar__item">
+        <span class="alert-dot active"></span>
+        Accidente vehicular — Av. Javier Prado
+      </div>
+      <div class="alert-bar__item">
+        <span class="alert-dot warning"></span>
+        Fuga de gas — San Isidro
+      </div>
+      <div class="alert-bar__item">
+        <span class="alert-dot active"></span>
+        Robo en curso — Miraflores
+      </div>
+      <div class="alert-bar__item">
+        <span class="alert-dot resolved"></span>
+        Incendio atendido — La Victoria
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Funcionalidades</span>
+        <h2 class="section-title">Todo lo que necesitas en una emergencia</h2>
+        <p class="section-desc">Diseñado para funcionar bajo presión. Cada función responde a una necesidad real identificada con ciudadanos de Lima.</p>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card feature-card--highlight">
+          <div class="feature-card__icon">🚨</div>
+          <h3>Botón SOS</h3>
+          <p>Un solo toque activa el reporte. Sin formularios, sin pasos innecesarios. Tu ubicación se detecta automáticamente.</p>
+          <span class="feature-tag">US10 — Core</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📍</div>
+          <h3>Geolocalización automática</h3>
+          <p>El sistema detecta y envía tu ubicación exacta a las autoridades sin que tengas que escribir nada.</p>
+          <span class="feature-tag">US04</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📷</div>
+          <h3>Evidencia multimedia</h3>
+          <p>Adjunta fotos y videos directamente desde la cámara para que las autoridades entiendan la situación antes de llegar.</p>
+          <span class="feature-tag">US05 / US06</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🗺️</div>
+          <h3>Mapa interactivo</h3>
+          <p>Visualiza emergencias activas en tiempo real cerca de ti. Identifica zonas de riesgo y rutas seguras.</p>
+          <span class="feature-tag">US13 / US15 / US16</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🔔</div>
+          <h3>Alertas en tiempo real</h3>
+          <p>Recibe notificaciones push sobre incidentes cercanos y actualizaciones del estado de tu reporte.</p>
+          <span class="feature-tag">US12 / US17</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🏷️</div>
+          <h3>Categorías de emergencia</h3>
+          <p>Clasifica el incidente: accidente, robo, incendio, fuga de gas u otros. El sistema lo dirige a la entidad correcta.</p>
+          <span class="feature-tag">US07 / US01 / US02 / US03</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🕵️</div>
+          <h3>Reporte anónimo</h3>
+          <p>Reporta sin revelar tu identidad cuando sientas que tu seguridad podría estar comprometida.</p>
+          <span class="feature-tag">US09</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📊</div>
+          <h3>Estado del reporte</h3>
+          <p>Sigue en tiempo real qué pasa con tu alerta: enviado, en proceso, atendido. Sin incertidumbre.</p>
+          <span class="feature-tag">US17 / US18</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🔗</div>
+          <h3>Compartir incidentes</h3>
+          <p>Comparte reportes con contactos para alertar a personas cercanas a la zona de riesgo.</p>
+          <span class="feature-tag">US20</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">¿Cómo funciona?</span>
+        <h2 class="section-title">De la emergencia a la ayuda en 3 pasos</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <div class="step__content">
+            <h3>Abre y presiona SOS</h3>
+            <p>Al detectar una emergencia, abre Nexo Urbano y presiona el botón central. La geolocalización se activa automáticamente en segundo plano.</p>
+          </div>
+          <div class="step__visual">
+            <div class="step-phone step-phone--1">
+              <div class="step-phone__screen">
+                <div class="mini-sos">S.O.S</div>
+                <div class="mini-label">Toca para reportar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <div class="step__content">
+            <h3>Clasifica y envía evidencia</h3>
+            <p>Selecciona el tipo de incidente y adjunta fotos o videos opcionales. El sistema confirma tu ubicación en el mapa antes de enviar.</p>
+          </div>
+          <div class="step__visual">
+            <div class="step-phone step-phone--2">
+              <div class="step-phone__screen">
+                <div class="mini-categories">
+                  <span class="mini-cat active">🚗 Accidente</span>
+                  <span class="mini-cat">🔥 Incendio</span>
+                  <span class="mini-cat">🔫 Robo</span>
+                  <span class="mini-cat">⚡ Gas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <div class="step__content">
+            <h3>Autoridades reciben y actúan</h3>
+            <p>El reporte llega instantáneamente a la entidad correcta. Recibirás un código de seguimiento y notificaciones del estado de atención.</p>
+          </div>
+          <div class="step__visual">
+            <div class="step-phone step-phone--3">
+              <div class="step-phone__screen">
+                <div class="mini-success">
+                  <span class="mini-check">✓</span>
+                  <span>Reporte enviado</span>
+                  <span class="mini-code">#NX-2847</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="report-demo" id="report">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Simulación</span>
+        <h2 class="section-title">Prueba cómo funciona el reporte</h2>
+        <p class="section-desc">Interactúa con la simulación del flujo de reporte de emergencia.</p>
+      </div>
+      <div class="demo__wrapper">
+        <div class="demo__phone">
+          <div class="demo__screen" id="demoScreen">
+
+            <div class="demo-step" id="demoStep1">
+              <div class="demo__header">
+                <span class="demo__time">9:41</span>
+                <span class="demo__app-name">Nexo Urbano</span>
+              </div>
+              <p class="demo__greeting">Buenos días, Lima</p>
+              <button class="demo-sos" id="demoSosBtn">
+                <span class="demo-sos__ring"></span>
+                <span class="demo-sos__ring demo-sos__ring--2"></span>
+                S.O.S
+              </button>
+              <p class="demo__hint">Presiona el botón para reportar</p>
+              <div class="demo__map-preview">
+                <div class="demo-map-dot"></div>
+                <div class="demo-map-dot demo-map-dot--2"></div>
+                <span>3 incidentes cercanos</span>
+              </div>
+            </div>
+
+            <div class="demo-step hidden" id="demoStep2">
+              <div class="demo__header">
+                <span>← Atrás</span>
+                <span>Nueva emergencia</span>
+              </div>
+              <p class="demo__section-label">¿Qué tipo de emergencia?</p>
+              <div class="demo__categories">
+                <button class="demo__cat" data-type="Accidente vehicular">🚗<span>Accidente</span></button>
+                <button class="demo__cat" data-type="Incendio">🔥<span>Incendio</span></button>
+                <button class="demo__cat" data-type="Robo o asalto">🔫<span>Robo</span></button>
+                <button class="demo__cat" data-type="Fuga de gas">⚡<span>Fuga gas</span></button>
+                <button class="demo__cat" data-type="Persona herida">🏥<span>Herido</span></button>
+                <button class="demo__cat" data-type="Otro incidente">⚠️<span>Otro</span></button>
+              </div>
+              <div class="demo__location-bar">
+                <span>📍</span>
+                <span id="demoLocation">Detectando ubicación...</span>
+              </div>
+            </div>
+
+            <div class="demo-step hidden" id="demoStep3">
+              <div class="demo__header">
+                <span>← Atrás</span>
+                <span>Detalles</span>
+              </div>
+              <div class="demo__selected-type" id="demoSelectedType"></div>
+              <div class="demo__location-confirmed">
+                <span>📍</span>
+                <span>Av. Javier Prado 1540, Lima</span>
+                <span class="demo__loc-ok">✓</span>
+              </div>
+              <div class="demo__media-row">
+                <button class="demo__media-btn">📷 Foto</button>
+                <button class="demo__media-btn">🎥 Video</button>
+              </div>
+              <textarea class="demo__textarea" placeholder="Descripción opcional..."></textarea>
+              <label class="demo__anon">
+                <input type="checkbox" id="anonCheck"> Reportar de forma anónima
+              </label>
+              <button class="demo__send-btn" id="demoSendBtn">Enviar reporte</button>
+            </div>
+
+            <div class="demo-step hidden" id="demoStep4">
+              <div class="demo__success">
+                <div class="demo__success-icon">✓</div>
+                <h3>Reporte enviado</h3>
+                <p>Las autoridades ya recibieron tu alerta con tu ubicación exacta.</p>
+                <div class="demo__code-box">
+                  Código de seguimiento<br>
+                  <strong id="demoCode"></strong>
+                </div>
+                <div class="demo__status-bar">
+                  <div class="demo__status-item active">Enviado</div>
+                  <div class="demo__status-item">En proceso</div>
+                  <div class="demo__status-item">Atendido</div>
+                </div>
+                <button class="demo__reset-btn" id="demoResetBtn">Volver al inicio</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="demo__info">
+          <h3>Flujo principal de reporte</h3>
+          <ul class="demo__checklist">
+            <li id="check1" class="check-item">
+              <span class="check-icon">○</span>
+              Presionar botón SOS
+            </li>
+            <li id="check2" class="check-item">
+              <span class="check-icon">○</span>
+              Seleccionar tipo de emergencia
+            </li>
+            <li id="check3" class="check-item">
+              <span class="check-icon">○</span>
+              Confirmar ubicación y detalles
+            </li>
+            <li id="check4" class="check-item">
+              <span class="check-icon">○</span>
+              Reporte enviado a autoridades
+            </li>
+          </ul>
+          <div class="demo__note">
+            <strong>30 segundos</strong> es el tiempo objetivo para completar un reporte completo.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Beneficios</span>
+        <h2 class="section-title">¿Por qué usar Nexo Urbano?</h2>
+      </div>
+      <div class="benefits__grid">
+        <div class="benefit-item">
+          <div class="benefit-item__icon">⚡</div>
+          <h3>Respuesta más rápida</h3>
+          <p>Los reportes llegan directamente a la entidad correcta. Sin intermediarios, sin llamadas que nadie contesta.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon">🎯</div>
+          <h3>Información precisa</h3>
+          <p>Ubicación GPS exacta + evidencia visual = autoridades que saben exactamente dónde ir y qué esperar.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon">🔒</div>
+          <h3>Reporta con confianza</h3>
+          <p>Puedes reportar de forma anónima cuando necesites proteger tu identidad en situaciones de riesgo.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon">👁️</div>
+          <h3>Mantente informado</h3>
+          <p>El mapa interactivo muestra emergencias activas cerca de ti para que puedas tomar mejores decisiones.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon">📱</div>
+          <h3>Diseñado para el estrés</h3>
+          <p>Interfaz mínima, botones grandes, flujo de 3 pasos. Funciona incluso cuando tus manos tiemblan.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon">🤝</div>
+          <h3>Conecta con autoridades</h3>
+          <p>Alianzas con municipalidades, Defensa Civil y PNP para que tu reporte no quede en el vacío.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="segments" id="segments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Para todos</span>
+        <h2 class="section-title">Diseñado para cada ciudadano</h2>
+      </div>
+      <div class="segments__tabs">
+        <button class="seg-tab active" data-seg="students">Estudiantes</button>
+        <button class="seg-tab" data-seg="drivers">Conductores</button>
+        <button class="seg-tab" data-seg="pedestrians">Transeúntes</button>
+      </div>
+      <div class="segments__content">
+        <div class="seg-panel active" id="seg-students">
+          <div class="seg-panel__text">
+            <h3>Para estudiantes universitarios</h3>
+            <p>Te desplazas todos los días entre la universidad, el trabajo y el transporte público. Nexo Urbano te permite alertar a otros estudiantes y conectar con seguridad del campus al instante.</p>
+            <ul class="seg-list">
+              <li>Alerta instantánea desde el campus</li>
+              <li>Comparte incidentes con compañeros</li>
+              <li>Visualiza zonas peligrosas en tu ruta</li>
+              <li>Reporta robos o situaciones de riesgo cerca de tu universidad</li>
+            </ul>
+          </div>
+          <div class="seg-panel__visual">
+            <div class="seg-card">
+              <span class="seg-card__icon">🎓</span>
+              <span>Estudiante, 20 años</span>
+              <p>"Sería muy útil una herramienta que funcione de inmediato sin pasos complejos"</p>
+              <span class="seg-card__tag">Entrevistado</span>
+            </div>
+          </div>
+        </div>
+        <div class="seg-panel" id="seg-drivers">
+          <div class="seg-panel__text">
+            <h3>Para conductores</h3>
+            <p>Mientras conduces, la prioridad es la seguridad. El botón SOS y los comandos de voz te permiten reportar sin desviar tu atención del camino.</p>
+            <ul class="seg-list">
+              <li>Reporte con mínima interacción manual</li>
+              <li>Visualiza accidentes antes de llegar</li>
+              <li>Activa el reporte sin apartar la vista</li>
+              <li>Botón SOS de acceso rápido desde la pantalla principal</li>
+            </ul>
+          </div>
+          <div class="seg-panel__visual">
+            <div class="seg-card">
+              <span class="seg-card__icon">🚗</span>
+              <span>Conductor, 35 años</span>
+              <p>"La información más importante al reportar un accidente es la ubicación y la gravedad"</p>
+              <span class="seg-card__tag">José Velasque — Entrevistado</span>
+            </div>
+          </div>
+        </div>
+        <div class="seg-panel" id="seg-pedestrians">
+          <div class="seg-panel__text">
+            <h3>Para transeúntes</h3>
+            <p>Estás en la calle y presencias algo. No siempre sabes a quién llamar. Nexo Urbano te da la herramienta para actuar sin arriesgarte.</p>
+            <ul class="seg-list">
+              <li>Reporta sin intervenir directamente</li>
+              <li>Opción de reporte anónimo</li>
+              <li>Adjunta evidencia visual rápidamente</li>
+              <li>Recibe confirmación de que tu alerta fue recibida</li>
+            </ul>
+          </div>
+          <div class="seg-panel__visual">
+            <div class="seg-card">
+              <span class="seg-card__icon">🚶</span>
+              <span>Transeúnte, 28 años</span>
+              <p>"Lo más importante es que una herramienta funcione de inmediato sin pasos complejos"</p>
+              <span class="seg-card__tag">Entrevistado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Impacto</span>
+        <h2 class="section-title">Lima necesita Nexo Urbano</h2>
+        <p class="section-desc">Los datos hablan. La descoordinación en emergencias tiene consecuencias reales.</p>
+      </div>
+      <div class="stats__grid">
+        <div class="stat-card">
+          <div class="stat-card__number" data-target="99683">0</div>
+          <div class="stat-card__label">emergencias registradas en Perú (2003–2022)</div>
+          <div class="stat-card__source">INDECI, 2023</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number" data-target="86000">0</div>
+          <div class="stat-card__label">accidentes de tránsito en 2024</div>
+          <div class="stat-card__source">ATU, 2025</div>
+        </div>
+        <div class="stat-card stat-card--accent">
+          <div class="stat-card__number" data-target="50">0</div>
+          <div class="stat-card__label">de los accidentes ocurren en Lima</div>
+          <div class="stat-card__source">ATU, 2025</div>
+          <div class="stat-card__unit">%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number" data-target="89">0</div>
+          <div class="stat-card__label">de limeños percibe inseguridad en su entorno</div>
+          <div class="stat-card__source">INEI, 2024</div>
+          <div class="stat-card__unit">%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comparison" id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Comparativa</span>
+        <h2 class="section-title">Por qué Nexo Urbano es diferente</h2>
+      </div>
+      <div class="comparison__table-wrapper">
+        <table class="comparison__table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th class="col-nexo">Nexo Urbano</th>
+              <th>Waze</th>
+              <th>Guachiman.app</th>
+              <th>Toke</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reporte de emergencias urbanas</td>
+              <td class="col-nexo"><span class="check">✓</span></td>
+              <td><span class="partial">~</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="partial">~</span></td>
+            </tr>
+            <tr>
+              <td>Geolocalización automática</td>
+              <td class="col-nexo"><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Evidencia multimedia</td>
+              <td class="col-nexo"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="partial">~</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Conexión directa con autoridades</td>
+              <td class="col-nexo"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="partial">~</span></td>
+            </tr>
+            <tr>
+              <td>Reporte anónimo</td>
+              <td class="col-nexo"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Mapa de zonas peligrosas</td>
+              <td class="col-nexo"><span class="check">✓</span></td>
+              <td><span class="partial">~</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Cobertura a nivel Lima</td>
+              <td class="col-nexo"><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section" id="map">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Mapa en vivo</span>
+        <h2 class="section-title">Emergencias activas en Lima</h2>
+        <p class="section-desc">Simulación del mapa interactivo de Nexo Urbano con incidentes recientes.</p>
+      </div>
+      <div class="map-demo">
+        <div class="map-demo__canvas" id="mapCanvas">
+          <div class="map-grid"></div>
+          <div class="map-incident" style="top:30%;left:40%" data-type="Accidente" data-loc="Av. Javier Prado">
+            <span class="map-pin map-pin--accident">🚗</span>
+            <div class="map-tooltip">Accidente vehicular<br>Av. Javier Prado<br><em>Hace 5 min</em></div>
+          </div>
+          <div class="map-incident" style="top:55%;left:60%" data-type="Robo" data-loc="Miraflores">
+            <span class="map-pin map-pin--robbery">🔫</span>
+            <div class="map-tooltip">Robo en curso<br>Miraflores<br><em>Hace 2 min</em></div>
+          </div>
+          <div class="map-incident" style="top:45%;left:25%" data-type="Incendio" data-loc="La Victoria">
+            <span class="map-pin map-pin--fire">🔥</span>
+            <div class="map-tooltip">Incendio<br>La Victoria<br><em>Atendido</em></div>
+          </div>
+          <div class="map-incident" style="top:20%;left:70%" data-type="Gas" data-loc="San Isidro">
+            <span class="map-pin map-pin--gas">⚡</span>
+            <div class="map-tooltip">Fuga de gas<br>San Isidro<br><em>Hace 8 min</em></div>
+          </div>
+          <div class="map-user-dot">
+            <span class="map-user-pulse"></span>
+            <span class="map-user-center">Tú</span>
+          </div>
+        </div>
+        <div class="map-demo__legend">
+          <div class="legend-item"><span class="map-pin map-pin--accident">🚗</span> Accidente</div>
+          <div class="legend-item"><span class="map-pin map-pin--robbery">🔫</span> Robo</div>
+          <div class="legend-item"><span class="map-pin map-pin--fire">🔥</span> Incendio</div>
+          <div class="legend-item"><span class="map-pin map-pin--gas">⚡</span> Fuga de gas</div>
+        </div>
+        <div class="map-demo__filters">
+          <button class="map-filter active" data-filter="all">Todos</button>
+          <button class="map-filter" data-filter="accident">Accidentes</button>
+          <button class="map-filter" data-filter="robbery">Robos</button>
+          <button class="map-filter" data-filter="fire">Incendios</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="account-section" id="account">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Tu cuenta</span>
+        <h2 class="section-title">Regístrate y empieza a reportar</h2>
+      </div>
+      <div class="account__wrapper">
+        <div class="account__tabs">
+          <button class="acc-tab active" data-acc="register">Crear cuenta</button>
+          <button class="acc-tab" data-acc="login">Iniciar sesión</button>
+        </div>
+
+        <div class="acc-panel active" id="acc-register">
+          <form class="account-form" id="registerForm" novalidate>
+            <div class="form-group">
+              <label>Nombre completo</label>
+              <input type="text" id="regName" placeholder="Juan García" required>
+              <span class="form-error" id="regNameError"></span>
+            </div>
+            <div class="form-group">
+              <label>Correo electrónico</label>
+              <input type="email" id="regEmail" placeholder="juan@correo.com" required>
+              <span class="form-error" id="regEmailError"></span>
+            </div>
+            <div class="form-group">
+              <label>Contraseña</label>
+              <input type="password" id="regPass" placeholder="Mínimo 8 caracteres" required>
+              <span class="form-error" id="regPassError"></span>
+            </div>
+            <div class="form-group">
+              <label>Confirmar contraseña</label>
+              <input type="password" id="regPass2" placeholder="Repite tu contraseña" required>
+              <span class="form-error" id="regPass2Error"></span>
+            </div>
+            <label class="form-check">
+              <input type="checkbox" id="regTerms"> Acepto los <a href="#terms">términos y condiciones</a>
+            </label>
+            <button type="submit" class="btn btn--primary btn--full">Crear cuenta</button>
+          </form>
+          <div class="acc-success hidden" id="regSuccess">
+            <span class="acc-success__icon">✓</span>
+            <h3>¡Cuenta creada!</h3>
+            <p>Bienvenido a Nexo Urbano. Ya puedes empezar a reportar emergencias.</p>
+          </div>
+        </div>
+
+        <div class="acc-panel" id="acc-login">
+          <form class="account-form" id="loginForm" novalidate>
+            <div class="form-group">
+              <label>Correo electrónico</label>
+              <input type="email" id="loginEmail" placeholder="tu@correo.com" required>
+              <span class="form-error" id="loginEmailError"></span>
+            </div>
+            <div class="form-group">
+              <label>Contraseña</label>
+              <input type="password" id="loginPass" placeholder="Tu contraseña" required>
+              <span class="form-error" id="loginPassError"></span>
+            </div>
+            <a href="#" class="form-link" id="recoverLink">¿Olvidaste tu contraseña?</a>
+            <button type="submit" class="btn btn--primary btn--full">Iniciar sesión</button>
+          </form>
+          <div class="acc-success hidden" id="loginSuccess">
+            <span class="acc-success__icon">✓</span>
+            <h3>¡Sesión iniciada!</h3>
+            <p>Bienvenido de vuelta. Redirigiendo a la aplicación...</p>
+          </div>
+          <div class="acc-success hidden" id="recoverPanel">
+            <h3>Recuperar contraseña</h3>
+            <div class="form-group">
+              <label>Tu correo registrado</label>
+              <input type="email" id="recoverEmail" placeholder="tu@correo.com">
+            </div>
+            <button class="btn btn--primary btn--full" id="sendRecoverBtn">Enviar enlace</button>
+            <p class="recover-msg hidden" id="recoverMsg">✓ Enviamos un enlace a tu correo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="notifications-section" id="notifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Notificaciones</span>
+        <h2 class="section-title">Siempre al tanto de lo que pasa</h2>
+      </div>
+      <div class="notif__demo">
+        <div class="notif__controls">
+          <label class="toggle-row">
+            <span>Alertas de emergencias cercanas</span>
+            <label class="toggle">
+              <input type="checkbox" checked id="toggleNearby">
+              <span class="toggle__slider"></span>
+            </label>
+          </label>
+          <label class="toggle-row">
+            <span>Estado de mis reportes</span>
+            <label class="toggle">
+              <input type="checkbox" checked id="toggleStatus">
+              <span class="toggle__slider"></span>
+            </label>
+          </label>
+          <label class="toggle-row">
+            <span>Alertas masivas de autoridades</span>
+            <label class="toggle">
+              <input type="checkbox" id="toggleMass">
+              <span class="toggle__slider"></span>
+            </label>
+          </label>
+          <label class="toggle-row">
+            <span>Zonas peligrosas en mi ruta</span>
+            <label class="toggle">
+              <input type="checkbox" checked id="toggleRoute">
+              <span class="toggle__slider"></span>
+            </label>
+          </label>
+        </div>
+        <div class="notif__feed" id="notifFeed">
+          <div class="notif-item notif-item--emergency">
+            <span class="notif-icon">🚨</span>
+            <div class="notif-body">
+              <strong>Accidente vehicular</strong>
+              <span>Av. Javier Prado — a 300m de ti</span>
+              <time>Hace 2 min</time>
+            </div>
+          </div>
+          <div class="notif-item notif-item--status">
+            <span class="notif-icon">📋</span>
+            <div class="notif-body">
+              <strong>Tu reporte #NX-2841 fue atendido</strong>
+              <span>Bomberos llegaron al lugar</span>
+              <time>Hace 15 min</time>
+            </div>
+          </div>
+          <div class="notif-item notif-item--info">
+            <span class="notif-icon">⚠️</span>
+            <div class="notif-body">
+              <strong>Zona de riesgo en tu ruta</strong>
+              <span>Reportes frecuentes en Av. Brasil</span>
+              <time>Hoy, 8:30 AM</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="history-section" id="history">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Historial</span>
+        <h2 class="section-title">Seguimiento de tus reportes</h2>
+      </div>
+      <div class="history__demo">
+        <div class="history__filters">
+          <button class="hist-filter active" data-hfilter="all">Todos</button>
+          <button class="hist-filter" data-hfilter="pending">Pendientes</button>
+          <button class="hist-filter" data-hfilter="active">En proceso</button>
+          <button class="hist-filter" data-hfilter="resolved">Atendidos</button>
+        </div>
+        <div class="history__list" id="historyList">
+          <div class="hist-item" data-status="resolved">
+            <div class="hist-item__icon">🚗</div>
+            <div class="hist-item__body">
+              <strong>Accidente vehicular</strong>
+              <span>Av. Javier Prado 1540</span>
+              <time>05 Jun 2026 — 10:23 AM</time>
+            </div>
+            <span class="hist-badge hist-badge--resolved">Atendido</span>
+          </div>
+          <div class="hist-item" data-status="active">
+            <div class="hist-item__icon">🔫</div>
+            <div class="hist-item__body">
+              <strong>Robo en curso</strong>
+              <span>Miraflores, Jr. Lima</span>
+              <time>06 Jun 2026 — 7:45 PM</time>
+            </div>
+            <span class="hist-badge hist-badge--active">En proceso</span>
+          </div>
+          <div class="hist-item" data-status="pending">
+            <div class="hist-item__icon">⚡</div>
+            <div class="hist-item__body">
+              <strong>Fuga de gas</strong>
+              <span>San Isidro, Calle Las Flores</span>
+              <time>08 Jun 2026 — 9:12 AM</time>
+            </div>
+            <span class="hist-badge hist-badge--pending">Pendiente</span>
+          </div>
+          <div class="hist-item" data-status="resolved">
+            <div class="hist-item__icon">🔥</div>
+            <div class="hist-item__body">
+              <strong>Incendio</strong>
+              <span>La Victoria, Jr. Huánuco</span>
+              <time>02 Jun 2026 — 3:30 PM</time>
+            </div>
+            <span class="hist-badge hist-badge--resolved">Atendido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <div class="container">
+      <div class="download__inner">
+        <div class="download__text">
+          <h2>Descarga Nexo Urbano</h2>
+          <p>Disponible para Android e iOS. Gratuito para todos los ciudadanos de Lima Metropolitana.</p>
+          <div class="download__badges">
+            <a href="#" class="store-badge">
+              <span>▶</span>
+              <div>
+                <small>Disponible en</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+            <a href="#" class="store-badge">
+              <span></span>
+              <div>
+                <small>Disponible en</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="download__qr">
+          <div class="qr-placeholder">
+            <div class="qr-grid"></div>
+            <span>Escanea para descargar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFIL DE USUARIO US24 US25 US26 US27 US28 US30 -->
+  <section class="profile-section" id="profile">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Mi perfil</span>
+        <h2 class="section-title">Gestiona tu cuenta</h2>
+        <p class="section-desc">Edita tus datos, ajusta preferencias y controla tu privacidad desde un solo lugar.</p>
+      </div>
+      <div class="profile__wrapper">
+        <div class="profile__sidebar">
+          <div class="profile__avatar">
+            <div class="profile__avatar-circle" id="avatarCircle">JG</div>
+            <button class="profile__avatar-change">Cambiar foto</button>
+          </div>
+          <nav class="profile__nav">
+            <button class="profile__nav-item active" data-ptab="edit">Datos personales</button>
+            <button class="profile__nav-item" data-ptab="privacy">Privacidad</button>
+            <button class="profile__nav-item" data-ptab="appearance">Apariencia</button>
+            <button class="profile__nav-item" data-ptab="sync">Dispositivos</button>
+            <button class="profile__nav-item profile__nav-item--danger" data-ptab="delete">Eliminar cuenta</button>
+          </nav>
+        </div>
+        <div class="profile__content">
+
+          <div class="profile__panel active" id="ptab-edit">
+            <h3 class="profile__panel-title">Datos personales</h3>
+            <form class="account-form" id="profileForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" id="pName" value="Juan García">
+                </div>
+                <div class="form-group">
+                  <label>Apellido</label>
+                  <input type="text" id="pLastname" value="López">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" id="pEmail" value="juan.garcia@correo.com">
+              </div>
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="tel" id="pPhone" placeholder="+51 9XXXXXXXX">
+              </div>
+              <div class="form-group">
+                <label>Distrito</label>
+                <select id="pDistrict">
+                  <option>Miraflores</option>
+                  <option>San Isidro</option>
+                  <option>Surco</option>
+                  <option>La Molina</option>
+                  <option>San Borja</option>
+                  <option>Barranco</option>
+                  <option>Lima Cercado</option>
+                </select>
+              </div>
+              <div class="profile__actions">
+                <button type="submit" class="btn btn--primary">Guardar cambios</button>
+                <span class="profile__save-msg hidden" id="profileSaveMsg">✓ Cambios guardados</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="profile__panel" id="ptab-privacy">
+            <h3 class="profile__panel-title">Configurar privacidad</h3>
+            <div class="privacy-list">
+              <div class="toggle-row">
+                <div>
+                  <strong>Ubicación visible en el mapa</strong>
+                  <span class="toggle-sub">Permite que otros ciudadanos vean tu posición aproximada</span>
+                </div>
+                <label class="toggle"><input type="checkbox" checked><span class="toggle__slider"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div>
+                  <strong>Reportes públicos por defecto</strong>
+                  <span class="toggle-sub">Tus reportes serán visibles en el mapa comunitario</span>
+                </div>
+                <label class="toggle"><input type="checkbox" checked><span class="toggle__slider"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div>
+                  <strong>Compartir historial con autoridades</strong>
+                  <span class="toggle-sub">Las entidades podrán consultar tus reportes anteriores</span>
+                </div>
+                <label class="toggle"><input type="checkbox"><span class="toggle__slider"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div>
+                  <strong>Perfil anónimo por defecto</strong>
+                  <span class="toggle-sub">Tus reportes no mostrarán tu nombre ni foto</span>
+                </div>
+                <label class="toggle"><input type="checkbox"><span class="toggle__slider"></span></label>
+              </div>
+            </div>
+            <div class="profile__actions" style="margin-top:24px">
+              <button class="btn btn--primary" id="savePrivacyBtn">Guardar preferencias</button>
+              <span class="profile__save-msg hidden" id="privacySaveMsg">✓ Preferencias guardadas</span>
+            </div>
+          </div>
+
+          <div class="profile__panel" id="ptab-appearance">
+            <h3 class="profile__panel-title">Apariencia e idioma</h3>
+            <div class="appearance-list">
+              <div class="appearance-item">
+                <strong>Modo de visualización</strong>
+                <div class="theme-options">
+                  <button class="theme-btn active" id="themeLight" data-theme="light">☀️ Claro</button>
+                  <button class="theme-btn" id="themeDark" data-theme="dark">🌙 Oscuro</button>
+                  <button class="theme-btn" id="themeAuto" data-theme="auto">⚙️ Sistema</button>
+                </div>
+              </div>
+              <div class="appearance-item">
+                <strong>Idioma de la aplicación</strong>
+                <select id="langSelect" class="lang-select">
+                  <option value="es" selected>🇵🇪 Español (Perú)</option>
+                  <option value="en">🇺🇸 English</option>
+                  <option value="qu">Quechua</option>
+                </select>
+              </div>
+              <div class="appearance-item">
+                <strong>Tamaño de texto</strong>
+                <div class="size-options">
+                  <button class="size-btn" data-size="sm">A</button>
+                  <button class="size-btn active" data-size="md">A</button>
+                  <button class="size-btn" data-size="lg">A</button>
+                </div>
+              </div>
+            </div>
+            <div class="profile__actions" style="margin-top:24px">
+              <button class="btn btn--primary" id="saveAppearanceBtn">Aplicar</button>
+              <span class="profile__save-msg hidden" id="appearanceSaveMsg">✓ Apariencia actualizada</span>
+            </div>
+          </div>
+
+          <div class="profile__panel" id="ptab-sync">
+            <h3 class="profile__panel-title">Dispositivos vinculados</h3>
+            <div class="sync-list">
+              <div class="sync-item sync-item--current">
+                <div class="sync-icon">📱</div>
+                <div class="sync-body">
+                  <strong>Samsung Galaxy S23 <span class="sync-badge">Este dispositivo</span></strong>
+                  <span>Android 14 · Lima, Perú</span>
+                  <time>Activo ahora</time>
+                </div>
+              </div>
+              <div class="sync-item">
+                <div class="sync-icon">💻</div>
+                <div class="sync-body">
+                  <strong>Chrome en Windows</strong>
+                  <span>Navegador web · Lima, Perú</span>
+                  <time>Hace 2 días</time>
+                </div>
+                <button class="sync-remove" data-device="chrome">Desconectar</button>
+              </div>
+              <div class="sync-item">
+                <div class="sync-icon">📱</div>
+                <div class="sync-body">
+                  <strong>iPhone 14</strong>
+                  <span>iOS 17 · Lima, Perú</span>
+                  <time>Hace 1 semana</time>
+                </div>
+                <button class="sync-remove" data-device="iphone">Desconectar</button>
+              </div>
+            </div>
+            <button class="btn btn--ghost" style="margin-top:16px" id="addDeviceBtn">+ Vincular nuevo dispositivo</button>
+            <p class="sync-note hidden" id="syncNote">✓ Se enviará un enlace de vinculación a tu correo.</p>
+          </div>
+
+          <div class="profile__panel" id="ptab-delete">
+            <h3 class="profile__panel-title" style="color:var(--red)">Eliminar cuenta</h3>
+            <div class="delete-warning">
+              <div class="delete-warning__icon">⚠️</div>
+              <div>
+                <strong>Esta acción es permanente e irreversible</strong>
+                <p>Se eliminarán todos tus reportes, historial y datos personales. Las autoridades perderán acceso a tu historial de incidentes.</p>
+              </div>
+            </div>
+            <div class="form-group" style="margin-top:20px">
+              <label>Escribe <strong>ELIMINAR</strong> para confirmar</label>
+              <input type="text" id="deleteConfirm" placeholder="ELIMINAR">
+            </div>
+            <div class="form-group">
+              <label>Motivo (opcional)</label>
+              <select id="deleteReason">
+                <option value="">Selecciona un motivo</option>
+                <option>Ya no uso la aplicación</option>
+                <option>Preocupaciones de privacidad</option>
+                <option>Problemas técnicos</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <button class="btn btn--danger" id="deleteAccountBtn" disabled>Eliminar mi cuenta</button>
+            <div class="acc-success hidden" id="deleteSuccess" style="margin-top:16px">
+              <span class="acc-success__icon" style="background:#E53935">✕</span>
+              <h3>Solicitud enviada</h3>
+              <p>Tu cuenta será eliminada en 30 días. Puedes cancelar esto iniciando sesión antes de ese plazo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL OPERADOR US31 US32 US33 US34 US35 US36 US37 US38 US39 US40 -->
+  <section class="operator-section" id="operator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Panel de operador</span>
+        <h2 class="section-title">Centro de gestión de incidentes</h2>
+        <p class="section-desc">Vista del operador municipal para monitorear, validar y coordinar la respuesta a emergencias en tiempo real.</p>
+      </div>
+      <div class="operator__wrapper">
+        <div class="operator__sidebar">
+          <div class="operator__role">
+            <div class="operator__role-icon">👮</div>
+            <div>
+              <strong>Operador activo</strong>
+              <span>Municipalidad de Lima · Turno mañana</span>
+            </div>
+          </div>
+          <nav class="operator__nav">
+            <button class="op-tab active" data-optab="monitor">Monitoreo</button>
+            <button class="op-tab" data-optab="validate">Validar reportes</button>
+            <button class="op-tab" data-optab="assign">Asignar unidades</button>
+            <button class="op-tab" data-optab="history">Historial operador</button>
+            <button class="op-tab" data-optab="admin">Panel admin</button>
+          </nav>
+          <div class="operator__stats-mini">
+            <div class="op-stat"><span id="opPending">3</span><small>Pendientes</small></div>
+            <div class="op-stat"><span id="opActive">2</span><small>En proceso</small></div>
+            <div class="op-stat op-stat--ok"><span id="opResolved">18</span><small>Atendidos hoy</small></div>
+          </div>
+        </div>
+        <div class="operator__content">
+
+          <!-- US33 Monitorear incidentes -->
+          <div class="op-panel active" id="optab-monitor">
+            <div class="op-panel__header">
+              <h4>Incidentes activos en tiempo real</h4>
+              <span class="op-live-dot"></span>
+              <span style="font-size:0.8rem;color:var(--gray-3)">Actualización en vivo</span>
+            </div>
+            <div class="op-incidents" id="opIncidentsList">
+              <div class="op-incident op-incident--high" data-id="INC001">
+                <div class="op-incident__priority">🔴</div>
+                <div class="op-incident__body">
+                  <strong>Accidente vehicular con heridos</strong>
+                  <span>Av. Javier Prado Este 2140 · Hace 3 min</span>
+                  <span class="op-incident__reporter">Reportado por ciudadano · Foto adjunta</span>
+                </div>
+                <div class="op-incident__actions">
+                  <button class="op-btn op-btn--view" data-action="view" data-id="INC001">Ver</button>
+                  <button class="op-btn op-btn--assign" data-action="assign" data-id="INC001">Asignar</button>
+                </div>
+              </div>
+              <div class="op-incident op-incident--med" data-id="INC002">
+                <div class="op-incident__priority">🟡</div>
+                <div class="op-incident__body">
+                  <strong>Fuga de gas domiciliaria</strong>
+                  <span>San Isidro, Calle Las Magnolias 380 · Hace 8 min</span>
+                  <span class="op-incident__reporter">Reportado por ciudadano · Sin evidencia</span>
+                </div>
+                <div class="op-incident__actions">
+                  <button class="op-btn op-btn--view" data-action="view" data-id="INC002">Ver</button>
+                  <button class="op-btn op-btn--assign" data-action="assign" data-id="INC002">Asignar</button>
+                </div>
+              </div>
+              <div class="op-incident op-incident--low" data-id="INC003">
+                <div class="op-incident__priority">🟢</div>
+                <div class="op-incident__body">
+                  <strong>Robo al paso</strong>
+                  <span>Miraflores, Av. Larco 400 · Hace 12 min</span>
+                  <span class="op-incident__reporter">Reporte anónimo · Video adjunto</span>
+                </div>
+                <div class="op-incident__actions">
+                  <button class="op-btn op-btn--view" data-action="view" data-id="INC003">Ver</button>
+                  <button class="op-btn op-btn--assign" data-action="assign" data-id="INC003">Asignar</button>
+                </div>
+              </div>
+            </div>
+            <div class="op-detail hidden" id="opDetail">
+              <button class="op-detail__back" id="opDetailBack">← Volver</button>
+              <div class="op-detail__content" id="opDetailContent"></div>
+            </div>
+          </div>
+
+          <!-- US31 Validar reportes + US36 Detectar duplicados -->
+          <div class="op-panel" id="optab-validate">
+            <div class="op-panel__header">
+              <h4>Validar reportes ciudadanos</h4>
+            </div>
+            <p style="font-size:0.88rem;color:var(--gray-3);margin-bottom:20px">Revisa, confirma o descarta los reportes antes de asignar recursos.</p>
+            <div class="validate-list">
+              <div class="validate-item" id="val1">
+                <div class="validate-item__info">
+                  <strong>#NX-2901 — Incendio en taller mecánico</strong>
+                  <span>La Victoria · Video adjunto · Hace 5 min</span>
+                </div>
+                <div class="validate-item__flags">
+                  <span class="val-flag val-flag--ok">Ubicación verificada</span>
+                  <span class="val-flag val-flag--warn">Sin duplicados</span>
+                </div>
+                <div class="validate-item__actions">
+                  <button class="op-btn op-btn--confirm" data-vid="val1">✓ Confirmar</button>
+                  <button class="op-btn op-btn--discard" data-vid="val1">✗ Descartar</button>
+                  <button class="op-btn op-btn--dup" data-vid="val1">Marcar duplicado</button>
+                </div>
+              </div>
+              <div class="validate-item" id="val2">
+                <div class="validate-item__info">
+                  <strong>#NX-2902 — Persona herida en vía pública</strong>
+                  <span>Surco · Sin evidencia · Hace 11 min</span>
+                </div>
+                <div class="validate-item__flags">
+                  <span class="val-flag val-flag--warn">Ubicación imprecisa</span>
+                  <span class="val-flag val-flag--err">Posible duplicado de #NX-2899</span>
+                </div>
+                <div class="validate-item__actions">
+                  <button class="op-btn op-btn--confirm" data-vid="val2">✓ Confirmar</button>
+                  <button class="op-btn op-btn--discard" data-vid="val2">✗ Descartar</button>
+                  <button class="op-btn op-btn--dup" data-vid="val2">Marcar duplicado</button>
+                </div>
+              </div>
+              <div class="validate-item" id="val3">
+                <div class="validate-item__info">
+                  <strong>#NX-2903 — Semáforo dañado</strong>
+                  <span>Miraflores · Foto adjunta · Hace 18 min</span>
+                </div>
+                <div class="validate-item__flags">
+                  <span class="val-flag val-flag--ok">Ubicación verificada</span>
+                  <span class="val-flag val-flag--ok">Sin duplicados</span>
+                </div>
+                <div class="validate-item__actions">
+                  <button class="op-btn op-btn--confirm" data-vid="val3">✓ Confirmar</button>
+                  <button class="op-btn op-btn--discard" data-vid="val3">✗ Descartar</button>
+                  <button class="op-btn op-btn--dup" data-vid="val3">Marcar duplicado</button>
+                </div>
+              </div>
+            </div>
+            <div class="validate-empty hidden" id="validateEmpty">
+              <span>✓</span>
+              <p>No hay reportes pendientes de validación</p>
+            </div>
+          </div>
+
+          <!-- US32 Asignar unidades + US37 Escalar + US39 Contactar + US34 Cerrar + US35 Actualizar estado -->
+          <div class="op-panel" id="optab-assign">
+            <div class="op-panel__header">
+              <h4>Asignar unidades de respuesta</h4>
+            </div>
+            <div class="assign-incident-select">
+              <label style="font-size:0.85rem;font-weight:600;font-family:var(--font-display)">Incidente a atender</label>
+              <select id="assignIncidentSelect">
+                <option value="">Selecciona un incidente</option>
+                <option value="INC001">🔴 INC001 — Accidente vehicular con heridos</option>
+                <option value="INC002">🟡 INC002 — Fuga de gas domiciliaria</option>
+                <option value="INC003">🟢 INC003 — Robo al paso</option>
+              </select>
+            </div>
+            <div class="assign-units" id="assignUnits">
+              <div class="unit-card" data-unit="PNP">
+                <div class="unit-card__icon">👮</div>
+                <div class="unit-card__info">
+                  <strong>PNP — Patrulla 04</strong>
+                  <span>Disponible · 1.2 km</span>
+                </div>
+                <button class="unit-assign-btn" data-unit="PNP">Asignar</button>
+              </div>
+              <div class="unit-card" data-unit="BOB">
+                <div class="unit-card__icon">🚒</div>
+                <div class="unit-card__info">
+                  <strong>Bomberos — Unidad 7</strong>
+                  <span>Disponible · 2.4 km</span>
+                </div>
+                <button class="unit-assign-btn" data-unit="BOB">Asignar</button>
+              </div>
+              <div class="unit-card" data-unit="SAMU">
+                <div class="unit-card__icon">🚑</div>
+                <div class="unit-card__info">
+                  <strong>SAMU — Ambulancia 12</strong>
+                  <span>Disponible · 3.1 km</span>
+                </div>
+                <button class="unit-assign-btn" data-unit="SAMU">Asignar</button>
+              </div>
+              <div class="unit-card" data-unit="SERENAZGO">
+                <div class="unit-card__icon">🛡️</div>
+                <div class="unit-card__info">
+                  <strong>Serenazgo — Moto 09</strong>
+                  <span>Disponible · 0.8 km</span>
+                </div>
+                <button class="unit-assign-btn" data-unit="SERENAZGO">Asignar</button>
+              </div>
+            </div>
+            <div class="assign-actions">
+              <!-- US37 Escalar -->
+              <button class="btn btn--outline" id="escalateBtn">↑ Escalar a Defensa Civil</button>
+              <!-- US39 Contactar ciudadano -->
+              <button class="btn btn--outline" id="contactCitizenBtn">📞 Contactar ciudadano</button>
+              <!-- US34 Cerrar + US35 Actualizar estado -->
+              <button class="btn btn--outline" id="updateStatusBtn">⟳ Actualizar estado</button>
+              <button class="btn btn--danger" id="closeIncidentBtn" disabled>✓ Cerrar incidente</button>
+            </div>
+            <div class="assign-feedback hidden" id="assignFeedback"></div>
+          </div>
+
+          <!-- US40 Registrar historial -->
+          <div class="op-panel" id="optab-history">
+            <div class="op-panel__header">
+              <h4>Historial de operaciones</h4>
+              <button class="op-btn op-btn--export" id="exportHistoryBtn">⬇ Exportar</button>
+            </div>
+            <div class="op-history">
+              <div class="op-hist-item op-hist-item--resolved">
+                <span class="op-hist-status">✓ Cerrado</span>
+                <div class="op-hist-body">
+                  <strong>#NX-2841 — Accidente vehicular</strong>
+                  <span>Av. Javier Prado · PNP + SAMU asignados · Resuelto en 8 min</span>
+                  <time>08 Jun 2026, 10:23</time>
+                </div>
+              </div>
+              <div class="op-hist-item op-hist-item--escalated">
+                <span class="op-hist-status">↑ Escalado</span>
+                <div class="op-hist-body">
+                  <strong>#NX-2838 — Derrumbe parcial</strong>
+                  <span>Rímac · Escalado a Defensa Civil · Resuelto en 42 min</span>
+                  <time>07 Jun 2026, 17:05</time>
+                </div>
+              </div>
+              <div class="op-hist-item op-hist-item--discarded">
+                <span class="op-hist-status">✗ Descartado</span>
+                <div class="op-hist-body">
+                  <strong>#NX-2835 — Reporte duplicado</strong>
+                  <span>Miraflores · Duplicado de #NX-2833</span>
+                  <time>07 Jun 2026, 14:30</time>
+                </div>
+              </div>
+              <div class="op-hist-item op-hist-item--resolved">
+                <span class="op-hist-status">✓ Cerrado</span>
+                <div class="op-hist-body">
+                  <strong>#NX-2830 — Incendio en local comercial</strong>
+                  <span>La Victoria · Bomberos asignados · Resuelto en 15 min</span>
+                  <time>06 Jun 2026, 09:11</time>
+                </div>
+              </div>
+            </div>
+            <p class="export-note hidden" id="exportNote">✓ Historial exportado en formato PDF.</p>
+          </div>
+
+          <!-- US41 Estadísticas + US42 Exportar + US43 Gestión usuarios + US44 Bloquear + US45 Operadores + US46 Alertas masivas + US47 Tiempos + US48 Tendencias + US49 Auditorías + US50 Encuestas -->
+          <div class="op-panel" id="optab-admin">
+            <div class="op-panel__header">
+              <h4>Panel de administrador</h4>
+              <span class="op-admin-badge">Admin</span>
+            </div>
+            <div class="admin-grid">
+              <div class="admin-card admin-card--stat">
+                <div class="admin-card__num">247</div>
+                <div class="admin-card__label">Reportes este mes</div>
+                <div class="admin-card__trend">↑ 12% vs mes anterior</div>
+              </div>
+              <div class="admin-card admin-card--stat">
+                <div class="admin-card__num">8.4 min</div>
+                <div class="admin-card__label">Tiempo promedio respuesta</div>
+                <div class="admin-card__trend admin-card__trend--ok">↓ 18% vs mes anterior</div>
+              </div>
+              <div class="admin-card admin-card--stat">
+                <div class="admin-card__num">1,024</div>
+                <div class="admin-card__label">Usuarios registrados</div>
+                <div class="admin-card__trend">↑ 5% este mes</div>
+              </div>
+              <div class="admin-card admin-card--stat">
+                <div class="admin-card__num">94%</div>
+                <div class="admin-card__label">Satisfacción usuarios</div>
+                <div class="admin-card__trend admin-card__trend--ok">↑ 3 pts</div>
+              </div>
+            </div>
+            <div class="admin-actions-grid">
+              <!-- US42 Exportar -->
+              <button class="admin-action-btn" id="adminExportBtn">
+                <span>📊</span>
+                <strong>Exportar reportes</strong>
+                <small>PDF / Excel</small>
+              </button>
+              <!-- US43 Gestionar usuarios + US44 Bloquear -->
+              <button class="admin-action-btn" id="adminUsersBtn">
+                <span>👥</span>
+                <strong>Gestionar usuarios</strong>
+                <small>Ver, editar, bloquear</small>
+              </button>
+              <!-- US45 Gestionar operadores -->
+              <button class="admin-action-btn" id="adminOpsBtn">
+                <span>👮</span>
+                <strong>Gestionar operadores</strong>
+                <small>Cuentas y permisos</small>
+              </button>
+              <!-- US46 Alertas masivas -->
+              <button class="admin-action-btn admin-action-btn--alert" id="adminAlertBtn">
+                <span>📢</span>
+                <strong>Alerta masiva</strong>
+                <small>Enviar a ciudadanos</small>
+              </button>
+              <!-- US47 Medir tiempos + US48 Tendencias -->
+              <button class="admin-action-btn" id="adminStatsBtn">
+                <span>📈</span>
+                <strong>Tendencias</strong>
+                <small>Tiempos y zonas de riesgo</small>
+              </button>
+              <!-- US49 Auditorías -->
+              <button class="admin-action-btn" id="adminAuditBtn">
+                <span>🔍</span>
+                <strong>Auditorías</strong>
+                <small>Registro del sistema</small>
+              </button>
+              <!-- US50 Encuestas -->
+              <button class="admin-action-btn" id="adminSurveyBtn">
+                <span>📋</span>
+                <strong>Enviar encuesta</strong>
+                <small>Satisfacción usuarios</small>
+              </button>
+            </div>
+            <!-- Modal masivo inline -->
+            <div class="admin-modal hidden" id="adminMassAlert">
+              <h4>Enviar alerta masiva</h4>
+              <div class="form-group">
+                <label>Tipo de alerta</label>
+                <select id="massAlertType">
+                  <option>Emergencia climática</option>
+                  <option>Cierre de vía</option>
+                  <option>Corte de servicio</option>
+                  <option>Aviso de seguridad</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Zona afectada</label>
+                <select id="massAlertZone">
+                  <option>Todo Lima Metropolitana</option>
+                  <option>Lima Centro</option>
+                  <option>Lima Sur</option>
+                  <option>Lima Norte</option>
+                  <option>Lima Este</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Mensaje</label>
+                <textarea id="massAlertMsg" placeholder="Redacta el mensaje de alerta..." style="min-height:70px"></textarea>
+              </div>
+              <div class="admin-modal__actions">
+                <button class="btn btn--primary" id="sendMassAlertBtn">Enviar alerta</button>
+                <button class="btn btn--ghost" id="cancelMassAlertBtn">Cancelar</button>
+              </div>
+              <p class="profile__save-msg hidden" id="massAlertSent">✓ Alerta enviada a los ciudadanos registrados.</p>
+            </div>
+            <!-- US43 panel inline -->
+            <div class="admin-modal hidden" id="adminUsersPanel">
+              <h4>Gestión de usuarios</h4>
+              <div class="users-table-wrapper">
+                <table class="users-table">
+                  <thead><tr><th>Usuario</th><th>Reportes</th><th>Estado</th><th>Acción</th></tr></thead>
+                  <tbody>
+                    <tr><td>María Ramos</td><td>12</td><td><span class="u-badge u-badge--active">Activo</span></td><td><button class="op-btn op-btn--discard" data-ubtn="maria">Bloquear</button></td></tr>
+                    <tr><td>Carlos Vega</td><td>4</td><td><span class="u-badge u-badge--active">Activo</span></td><td><button class="op-btn op-btn--discard" data-ubtn="carlos">Bloquear</button></td></tr>
+                    <tr><td>Luis Quispe</td><td>0</td><td><span class="u-badge u-badge--blocked">Bloqueado</span></td><td><button class="op-btn op-btn--confirm" data-ubtn="luis">Activar</button></td></tr>
+                    <tr><td>Ana Torres</td><td>7</td><td><span class="u-badge u-badge--active">Activo</span></td><td><button class="op-btn op-btn--discard" data-ubtn="ana">Bloquear</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="btn btn--ghost" id="closeUsersPanel" style="margin-top:12px">Cerrar</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Contacto</span>
+        <h2 class="section-title">¿Eres una municipalidad o entidad de emergencia?</h2>
+        <p class="section-desc">Estamos construyendo alianzas para que Nexo Urbano llegue a más ciudadanos. Escríbenos.</p>
+      </div>
+      <div class="contact__wrapper">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" id="contactName" placeholder="Tu nombre" required>
+              <span class="form-error" id="contactNameError"></span>
+            </div>
+            <div class="form-group">
+              <label>Institución</label>
+              <input type="text" id="contactOrg" placeholder="Municipalidad / Entidad">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" id="contactEmail" placeholder="contacto@institucion.gob.pe" required>
+            <span class="form-error" id="contactEmailError"></span>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea id="contactMessage" placeholder="Cuéntanos sobre tu institución y cómo podemos colaborar..." required></textarea>
+            <span class="form-error" id="contactMsgError"></span>
+          </div>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        </form>
+        <div class="contact-success hidden" id="contactSuccess">
+          <span class="acc-success__icon">✓</span>
+          <h3>Mensaje enviado</h3>
+          <p>Nos pondremos en contacto contigo pronto.</p>
+        </div>
+        <div class="contact__info">
+          <div class="contact-info-item">
+            <span>📧</span>
+            <span>contacto@nexourbano.pe</span>
+          </div>
+          <div class="contact-info-item">
+            <span>📍</span>
+            <span>Lima Metropolitana, Perú</span>
+          </div>
+          <div class="contact-info-item">
+            <span>🤝</span>
+            <span>Alianzas con municipalidades y Defensa Civil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="nav__logo-icon">!</span>
+            <span>Nexo Urbano</span>
+          </a>
+          <p>Conectando ciudadanos con las autoridades de emergencia en Lima.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <strong>Producto</strong>
+            <a href="#features">Funcionalidades</a>
+            <a href="#how">Cómo funciona</a>
+            <a href="#download">Descargar</a>
+          </div>
+          <div class="footer__col">
+            <strong>Empresa</strong>
+            <a href="#benefits">Beneficios</a>
+            <a href="#comparison">Comparativa</a>
+            <a href="#contact">Contacto</a>
+          </div>
+          <div class="footer__col">
+            <strong>Legal</strong>
+            <a href="#terms">Términos de uso</a>
+            <a href="#privacy">Privacidad</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Nexo Urbano. Todos los derechos reservados.</span>
+        <span>Hecho en Lima, Perú 🇵🇪</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sos-fab" id="sosFab" title="Simular reporte de emergencia">
+    S.O.S
+  </div>
+
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal" id="quickReportModal">
+      <button class="modal__close" id="modalClose">✕</button>
+      <h3>Reporte rápido</h3>
+      <p>Selecciona el tipo de emergencia:</p>
+      <div class="modal__cats">
+        <button class="modal-cat" data-mtype="Accidente">🚗 Accidente</button>
+        <button class="modal-cat" data-mtype="Incendio">🔥 Incendio</button>
+        <button class="modal-cat" data-mtype="Robo">🔫 Robo</button>
+        <button class="modal-cat" data-mtype="Gas">⚡ Gas</button>
+      </div>
+      <div class="modal__success hidden" id="modalSuccess">
+        <span class="acc-success__icon">✓</span>
+        <p>Reporte enviado. Código: <strong id="modalCode"></strong></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
